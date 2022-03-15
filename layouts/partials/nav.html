@@ -34,26 +34,26 @@
           {{ if (isset .Params "enslug" ) }}
             {{ $lowerenslug := lower .Params.enslug }}
               {{ $enUrl = printf "%s%s" "/property/" $lowerenslug }}
-            {{ else if (in .Permalink "/maisons/nouvelle/") }}
+            {{ else if (in .Permalink "hauser/neubau") }}
               {{ $enUrl = printf "%s" "/homes/new-build/" }}
-            {{ else if (in .Permalink "/maisons/revente/") }}
+            {{ else if (in .Permalink "hauser/gebraucht") }}
               {{ $enUrl = printf "%s" "/homes/resale/" }}
-            {{ else if (in .Permalink "maisons/appartement") }}
+            {{ else if (in .Permalink "hauser/wohnung") }}
               {{ $enUrl = printf "%s" "/homes/apartment/" }} //
-            {{ else if (in .Permalink "maisons/maison-mitoyenne") }}
+            {{ else if (in .Permalink "hauser/reihenhaus") }}
               {{ $enUrl = printf "%s" "/homes/townhouse/" }}
-            {{ else if (in .Permalink "maisons/maison-de-campagne") }}
+            {{ else if (in .Permalink "hauser/landhaus") }}
               {{ $enUrl = printf "%s" "/homes/finca/" }} 
-            {{ else if (in .Permalink "maisons/terraine") }}
+            {{ else if (in .Permalink "hauser/land") }}
               {{ $enUrl = printf "%s" "/homes/land/" }}
-            {{ else if (in .Permalink "maisons/batiment-commercial") }}
+            {{ else if (in .Permalink "hauser/gewerbeimmobilien") }}
               {{ $enUrl = printf "%s" "/homes/commercial/" }}  
-            {{ else if (in .Permalink "maisons/") }}
-              {{ $enUrl = replace .RelPermalink "maisons/" "homes/" }}                            
+            {{ else if (in .Permalink "hauser/") }}
+              {{ $enUrl = replace .RelPermalink "hauser/" "homes/" }}                            
             {{ else if (in .Permalink "index.json") }}
               {{ $enUrl = ""}}
-            {{ else if (in .Permalink "rechercher") }}
-            {{ $enUrl = replace .RelPermalink "rechercher" "search"  }}
+            {{ else if (in .Permalink "suche") }}
+            {{ $enUrl = replace .RelPermalink "suche" "search"  }}
             {{end}}
             {{if (in $enUrl "sud") }}
               {{ $enUrl = replace $enUrl "sud" "south"  }}
@@ -65,82 +65,70 @@
               {{ $enUrl = replace $enUrl "province-murcia" "murcia-province"  }} 
             {{end}}
 
-        {{ $deUrl := ""}}
+        {{ $frUrl := ""}}
           {{ $globeicon := "//res.cloudinary.com/manfredcostahomes/image/upload/globe.svg" }}
           {{ if (isset .Params "deslug" ) }}
             {{ $lowerdeslug := lower .Params.deslug }}
-              {{ $deUrl = printf "%s%s" "/immobilien/" $lowerdeslug }}
-            {{ else if (in .Permalink "/maisons/nouvelle/") }}
-              {{ $deUrl = printf "%s" "/hauser/neubau/" }}
-            {{ else if (in .Permalink "/maisons/revente/") }}
-              {{ $deUrl = printf "%s" "/hauser/gebraucht/" }}
-            {{ else if (in .Permalink "maisons/appartement") }}
-              {{ $deUrl = printf "%s" "/hauser/wohnung/" }} //
-            {{ else if (in .Permalink "maisons/maison-mitoyenne") }}
-              {{ $deUrl = printf "%s" "/hauser/reihenhaus/" }}
-            {{ else if (in .Permalink "maisons/maison-de-campagne") }}
-              {{ $deUrl = printf "%s" "/hauser/landhaus/" }} 
-            {{ else if (in .Permalink "maisons/terraine") }}
-              {{ $deUrl = printf "%s" "/hauser/land/" }}
-            {{ else if (in .Permalink "maisons/batiment-commercial") }}
-              {{ $deUrl = printf "%s" "/hauser/gewerbeimmobilien/" }}  
-            {{ else if (in .Permalink "maisons/") }}
-              {{ $deUrl = replace .RelPermalink "maisons/" "hauser/" }}                            
+              {{ $frUrl = printf "%s%s" "/immobilien/" $lowerdeslug }}
+            {{ else if (in .Permalink "hauser/neubau") }}
+              {{ $frUrl = printf "%s" "/maisons/nouvelle/" }}
+            {{ else if (in .Permalink "hauser/gebraucht") }}
+              {{ $frUrl = printf "%s" "/maisons/revente/" }}
+            {{ else if (in .Permalink "hauser/wohnung") }}
+              {{ $frUrl = printf "%s"  "/maisons/appartement/" }} //
+            {{ else if (in .Permalink "hauser/reihenhaus") }}
+              {{ $frUrl = printf "%s"  "/maisons/maison-mitoyenne/"}}
+            {{ else if (in .Permalink "hauser/landhaus") }}
+              {{ $frUrl = printf "%s" "/maisons/maison-de-campagne/" }} 
+            {{ else if (in .Permalink "/hauser/land/") }}
+              {{ $frUrl = printf "%s" "maisons/terraine" }}
+            {{ else if (in .Permalink "hauser/gewerbeimmobilien") }}
+              {{ $frUrl = printf "%s" "/maisons/batiment-commercial/" }}  
+            {{ else if (in .Permalink "hauser/") }}
+              {{ $frUrl = replace .RelPermalink "hauser/" "maisons/" }}                            
             {{ else if (in .Permalink "index.json") }}
-              {{ $deUrl = ""}}
-            {{ else if (in .Permalink "rechercher") }}
-            {{ $deUrl = replace .RelPermalink "rechercher" "suche"  }}
+              {{ $frUrl = ""}}
+            {{ else if (in .Permalink "suche") }}
+            {{ $frUrl = replace .RelPermalink "suche" "rechercher"  }}
             {{end}}
-            {{if (in $deUrl "sud") }}
-              {{ $deUrl = replace $deUrl "sud" "south"  }}
+            {{if (in $frUrl "provinz-murcia") }}
+              {{ $frUrl = replace $frUrl "provinz-murcia" "province-de-murcie"  }} 
             {{end}}
-            {{if (in $deUrl "nord") }}
-              {{ $deUrl = replace $deUrl "nord" "north"  }}
-            {{end}}
-            {{if (in $deUrl "provinz-murcia") }}
-              {{ $deUrl = replace $deUrl "province-murcia" "murcia-province"  }} 
-            {{end}}
-          {{ $nlUrl := ""}}
+        {{ $nlUrl := ""}}
           {{ $globeicon := "//res.cloudinary.com/manfredcostahomes/image/upload/globe.svg" }}
           {{ if (isset .Params "nlslug" ) }}
           {{ $lowernlslug := lower .Params.nlslug }}
             {{ $nlUrl = printf "%s%s" "/eigendom/" $lowernlslug }}
-          {{ else if (in .Permalink "/maisons/nouvelle/") }}
+          {{ else if (in .Permalink "hauser/neubau/") }}
             {{ $nlUrl = printf "%s" "/huizen/nieuwbouw/" }}
-          {{ else if (in .Permalink "/maisons/revente/") }}
+          {{ else if (in .Permalink "hauser/gebraucht") }}
             {{ $nlUrl = printf "%s" "/huizen/herverkoop/" }}
-          {{ else if (in .Permalink "maisons/appartement") }}
+          {{ else if (in .Permalink "hauser/wohnung") }}
             {{ $nlUrl = printf "%s" "/huizen/appartement/" }} //
-          {{ else if (in .Permalink "maisons/maison-mitoyenne") }}
+          {{ else if (in .Permalink "hauser/reihenhaus") }}
             {{ $nlUrl = printf "%s" "/huizen/rijhuis/" }}
-          {{ else if (in .Permalink "maisons/maison-de-campagne") }}
+          {{ else if (in .Permalink "hauser/landhaus") }}
             {{ $nlUrl = printf "%s" "/huizen/landhuis/" }} 
-          {{ else if (in .Permalink "maisons/terraine") }}
+          {{ else if (in .Permalink "hauser/land") }}
             {{ $nlUrl = printf "%s" "/huizen/land/" }}
-          {{ else if (in .Permalink "maisons/batiment-commercial") }}
+          {{ else if (in .Permalink "hauser/gewerbeimmobilien") }}
             {{ $nlUrl = printf "%s" "/huizen/commerciëel-vastgoed/" }}  
-          {{ else if (in .Permalink "maisons/") }}
-            {{ $nlUrl = replace .RelPermalink "maisons/" "huizen/" }}                            
+          {{ else if (in .Permalink "hauser/") }}
+            {{ $nlUrl = replace .RelPermalink "hauser/" "huizen/" }}                            
           {{ else if (in .Permalink "index.json") }}
             {{ $nlUrl = ""}}
-          {{ else if (in .Permalink "rechercher") }}
-          {{ $nlUrl = replace .RelPermalink "rechercher" "zoek"  }}
-          {{end}}
-          {{if (in $nlUrl "sud") }}
-            {{ $nlUrl = replace $nlUrl "sud" "south"  }}
-          {{end}}
-          {{if (in $nlUrl "nord") }}
-            {{ $nlUrl = replace $nlUrl "nord" "north"  }}
+          {{ else if (in .Permalink "suche") }}
+          {{ $nlUrl = replace .RelPermalink "suche" "zoek"  }}
           {{end}}
           {{if (in $nlUrl "provinz-murcia") }}
-            {{ $nlUrl = replace $nlUrl "province-murcia" "murcia-province"  }} 
+            {{ $nlUrl = replace $nlUrl "provinz-murcia" "provincie-murcia"  }} 
           {{end}}
 
     <ul class="languagepicker large navbar-end lingo navbar-item">
     <a class="addqs" href="{{ .Site.Params.host }}{{ .RelPermalink }}">
-    <li><img class="vam" src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s24">FR <span class="isactive" id="langarrow">&nbsp;▼</span></li></a>
-    <a class="addqs" href="{{ .Site.Params.desite}}{{ $deUrl }}"><li><span>DE</span></li></a>
+    <li><img class="vam" src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s24">DE <span class="isactive" id="langarrow">&nbsp;▼</span></li></a>
     <a class="addqs" href="{{ .Site.Params.ensite}}{{ $enUrl }}"><li><span>EN</span></li></a>
+    <a class="addqs" href="{{ .Site.Params.frsite}}{{ $frUrl }}"><li><span>FR</span></li></a>    
     <a class="addqs" href="{{ .Site.Params.nlsite}}{{ $nlUrl }}"><li><span>NL</span></li></a>
     </ul>
     </div>
