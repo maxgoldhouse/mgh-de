@@ -6,7 +6,7 @@ package = "/plugins/plugin-feed-to-content"
 contentdirectory = "content"
 partialsdirectory ="layouts/partials"
 [[plugins.inputs.feeds]]
-name = "biens"
+name = "hauser"
 url = "https://mgh-props.appspot.com/json/propdata/FR"
 ttl = 86400
 
