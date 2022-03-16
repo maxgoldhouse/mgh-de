@@ -7,7 +7,7 @@
     "gtprice": "{{ .Params.price }}",
     "salestage": "{{ .Params.salestage }}",
     "unitype": "{{ .Params.ptype }}",
-    "type" : "{{ with .Params.maisons }}{{ range first 1 . }}{{ . }}{{ end }}{{ end }}",
+    "type" : "{{ with .Params.hauser }}{{ range first 1 . }}{{ . }}{{ end }}{{ end }}",
     "plot" : "{{ .Params.plot }}",
     "living" : "{{ .Params.living }}",
     "location_detail" : "{{ .Params.location }}",

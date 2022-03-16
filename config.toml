@@ -1,10 +1,10 @@
 baseurl = "/"
-host = "https://fr.maxgoldhouse.com"
+host = "https://de.maxgoldhouse.com"
 title = "Villamartin Propri&eacute;t&eacute; a vendre, Playa Flamenca, Cabo Roig, Guardamar del Segura, Ciudad Quesada Costa Blanca Spain"
 relativeURLs = true
 
 [params]
-  desite = "https://de.maxgoldhouse.com"
+  frsite = "https://fr.maxgoldhouse.com"
   ensite = "https://www.maxgoldhouse.com"
   nlsite = "https://nl.maxgoldhouse.com"
   onlinehost = "https://mgh-de.netlify.app"
@@ -17,11 +17,11 @@ relativeURLs = true
   sold = "VERKAUFT"
 
 [taxonomies]
-  maison = "maisons"
+  haus = "hauser"
 
 [outputs]
     page = ["json","html"]
     section = ["json"] 
-    maison = ["json","html"]
-    contact = ["html"]
-    politique = ["html"]
+    immobilien = ["json","html"]
+    kontakt = ["html"]
+    politik = ["html"]

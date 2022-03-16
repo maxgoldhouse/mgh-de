@@ -1,4 +1,4 @@
 ---
-title: Recherche immobilière
-type: rechercher
+title: Suche nach Immobilien
+type: suche
 ---

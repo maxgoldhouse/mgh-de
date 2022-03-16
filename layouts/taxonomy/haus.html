@@ -1,5 +1,5 @@
 {{ define "head" }}
-    
+<script src="https://kit.fontawesome.com/73fe5491f6.js" crossorigin="anonymous"></script>
 {{ end }}
 
 {{ define "header" }}
@@ -13,7 +13,7 @@
         
     <div class="column is-3-desktop is-6-mobile is-4-tablet has-text-centered">
         <div class="card">
-         <a href="../biens/{{ lower .Params.slug }}">       
+         <a href="../immobilien/{{ lower .Params.slug }}">       
             <div class="card-content">
                 <div class="card-image">
                 <figure class="image is-4by3">                     
@@ -22,7 +22,7 @@
             </div>
                 <div class="media">
                       <div class="media-content">
-                        <p class="is-size-6 has-text-centered is-uppercase">{{ .Params.ptype }}</p>
+                        <p class="is-size-6 has-text-centered is-uppercase">{{ with .Params.hauser }}{{ range first 1 . }}{{ . }}{{ end }}{{ end }}</p>
                         <p class="is-size-7 has-text-centered">{{ .Params.location }}</p>
                         <p class="is-size-7 has-text-centered"> ref: {{ .Params.ref }} </p>
                       </div>
@@ -42,7 +42,7 @@
                     </p>
                     <p class="card-footer-item">
                         <span class="is-size-7 is-size-7-mobile">
-                          <i class="fa fa-swimming-pool fa-lg" aria-hidden=true></i> {{ .Params.pool }}
+                          <i class="fa fa-swimming-pool fa-lg" aria-hidden=true></i>  {{ if eq .Params.pool "No" }}Nein{{ else if eq .Params.pool "community" }}ja <i class="fa fa-question-circle" title="Gemeinschafts"></i>{{ else if eq .Params.pool "private" }}ja <i class="fa fa-question-circle" title="Privat"></i>{{ else if eq .Params.pool "public" }}ja <i class="fa fa-question-circle" title="öffentliches"></i>{{else}}?{{ end }}
                         </span>
                 </p>
                 </footer>
