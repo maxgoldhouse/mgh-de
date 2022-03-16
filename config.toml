@@ -7,13 +7,14 @@ relativeURLs = true
   desite = "https://de.maxgoldhouse.com"
   ensite = "https://www.maxgoldhouse.com"
   nlsite = "https://nl.maxgoldhouse.com"
-  host = "https://mgh-fr.netlify.app"
+  onlinehost = "https://mgh-de.netlify.app"
+  host = "http://localhost:1313"
   phone = "+34 657 612 295"
   email = "ellen@maxgoldhouse.com"
   address = "03191 Pinar de Campoverde (Alicante)"
   company = "MaxGoldHouse"
   director = "Ellen Van den Broek"
-  sold = "V E N D U"
+  sold = "VERKAUFT"
 
 [taxonomies]
   maison = "maisons"
