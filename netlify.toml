@@ -13,5 +13,3 @@ ttl = 86400
 [context.production.environment]
   HUGO_VERSION = "0.80.0"
 
-[[redirects]]
-
