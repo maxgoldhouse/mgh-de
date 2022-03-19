@@ -69,7 +69,7 @@
           {{ $globeicon := "//res.cloudinary.com/manfredcostahomes/image/upload/globe.svg" }}
           {{ if (isset .Params "frslug" ) }}
             {{ $lowerfrslug := lower .Params.frslug }}
-              {{ $frUrl = printf "%s%s" "/maisons/" $lowerfrslug }}
+              {{ $frUrl = printf "%s%s" "/biens/" $lowerfrslug }}
             {{ else if (in .Permalink "hauser/neubau") }}
               {{ $frUrl = printf "%s" "/maisons/nouvelle/" }}
             {{ else if (in .Permalink "hauser/gebraucht") }}
