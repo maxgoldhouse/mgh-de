@@ -25,7 +25,7 @@ for feed in data['feeds']:
           print('prop ref: '+key[lock]['ref'])
           f.write(json.dumps(key[lock], indent = 0)) 
 
-partialsfolder = "/home/papo/projects/mgh-sites-netlify/mgh-de/layouts/partials/"#"/workspace/layouts/partials/"
+partialsfolder = "/workspace/layouts/partials/"
 ## fetch and save  alllocations
 groupedbytownurl = 'https://mgh-props.appspot.com/getgroupedbytown'
 locationsurl = "http://mgh-props.appspot.com/locations"
