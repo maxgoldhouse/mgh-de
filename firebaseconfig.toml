@@ -5,9 +5,9 @@ relativeURLs = true
 
 [params]
   frsite = "https://fr.maxgoldhouse.com"
-  ensite = "https://www.maxgoldhouse.com"
+  ensite = "https://maxgoldhouse.com"
   nlsite = "https://nl.maxgoldhouse.com"
-  host = "https://mgh-3-de.web.app"
+  host = "https://de.maxgoldhouse.com"
   phone = "+34 657 612 295"
   email = "ellen@maxgoldhouse.com"
   address = "03191 Pinar de Campoverde (Alicante)"
