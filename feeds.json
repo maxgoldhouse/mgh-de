@@ -1,8 +1,7 @@
 {"feeds":[
     {
       "url": "https://mgh-props.appspot.com/json/propdata/DE",
-      "livefolder": "/workspace/content/immobilien/",
-      "folder": "/home/papo/projects/mgh-sites-netlify/mgh-de/content/immobilien/",
+      "folder": "/workspace/content/immobilien/",
       "partialsfolder": "/workspace/layouts/partials/"
     }
   ]
