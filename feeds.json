@@ -2,7 +2,7 @@
     {
       "url": "https://mgh-props.appspot.com/json/propdata/DE",
       "propertyfolder": "/workspace/content/immobilien/",
-      "pdffolder": "/workspace/content/immobilien/",
+      "pdffolder": "/workspace/content/pdf/",
       "partialsfolder": "/workspace/layouts/partials/"
     }
   ]
