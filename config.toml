@@ -20,7 +20,7 @@ relativeURLs = true
 
 [outputs]
     page = ["json","html"]
-    section = ["json"] 
+    section = ["json","html"] 
     immobilien = ["json","html"]
     kontakt = ["html"]
     politik = ["html"]
