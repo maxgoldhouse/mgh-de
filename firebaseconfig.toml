@@ -24,3 +24,4 @@ relativeURLs = true
     immobilien = ["json","html"]
     kontakt = ["html"]
     politik = ["html"]
+
