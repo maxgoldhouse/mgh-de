@@ -536,7 +536,7 @@
                       </footer>
                       <footer class=card-footer>
                           <p class="card-footer-item price">
-                              <span class="is-size-6 is-size-5-mobile has-text-weight-bold"> [%=o.displayprice.replace(",", ".")%] </span>                          
+                            <span class="is-size-6 is-size-5-mobile has-text-weight-bold">[% if (o.offeris == "new") { %] <span class="has-text-weight-bold">Ab </span>[% } %]  [%=o.displayprice.replace(",", ".")%] </span>                                                     
                           </p>
                       </footer>
                    </div>
