@@ -10,9 +10,10 @@ relativeURLs = true
   host = "http://localhost:1313"
   phone = "+34 657 612 295"
   email = "ellen@maxgoldhouse.com"
-  address = "03191 Pinar de Campoverde (Alicante)"
+  address = "03191 Orihuela Costa (Alicante)"
   company = "MaxGoldHouse"
   director = "Ellen Van den Broek"
+  apireg: "registriertes API-Mitglied: RAICV2961"
   sold = "VERKAUFT"
 
 [taxonomies]
